@@ -1,0 +1,12 @@
+{application, gtm_tool_finder_erl,
+ [{description, "Search the OneGTMLab GTM tool directory (tool API reviews, comparisons and glossary terms) offline, from Erlang or the command line."},
+  {vsn, "1.0.0"},
+  {registered, []},
+  {applications, [kernel, stdlib]},
+  {env, []},
+  {modules, []},
+  {licenses, ["MIT"]},
+  {links, [{"Website", "https://www.onegtmlab.dev"},
+           {"Tool directory", "https://www.onegtmlab.dev/tool-directory"},
+           {"GitHub", "https://github.com/jaizendra-netizen/gtm-tool-finder-erlang"}]}
+ ]}.
