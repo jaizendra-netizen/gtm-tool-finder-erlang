@@ -1,0 +1,10 @@
+{
+  "name": "gtmtoolfindererl",
+  "description": "Erlang library and escript to search the OneGTMLab GTM tool directory offline",
+  "sidebar": [
+    {
+      "title": "Overview",
+      "href": "/"
+    }
+  ]
+}

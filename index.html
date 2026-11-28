@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>gtmtoolfindererl | OneGTMLab</title>
+<meta name="description" content="Erlang library and escript to search the OneGTMLab GTM tool directory offline">
+<style>body{font:16px/1.6 system-ui,sans-serif;max-width:46rem;margin:2rem auto;padding:0 1rem;color:#1b1f23}pre{background:#f6f8fa;padding:1rem;overflow:auto}code{background:#f6f8fa;padding:.1em .3em}table{border-collapse:collapse}td,th{border:1px solid #d0d7de;padding:.3rem .6rem}</style>
+</head><body>
+<main>
+<h1 dir="auto">gtm_tool_finder_erl</h1>
+<p dir="auto">Search the <a href="https://www.onegtmlab.dev">OneGTMLab</a> GTM tool directory from Erlang or your terminal:</p>
+<ul dir="auto">
+<li>API reviews for 66 sales and marketing tools: pricing, rate limits, keys and MCP support</li>
+<li>99 head-to-head tool comparisons, such as Apollo vs Clay</li>
+<li>110 plain-English definitions of GTM terms</li>
+</ul>
+<h2 dir="auto">Installation</h2>
+<div class="highlight highlight-source-erlang" dir="auto"><pre class="notranslate">{<span class="pl-c1">deps</span>, [<span class="pl-c1">gtm_tool_finder_erl</span>]}.</pre></div>
+<h2 dir="auto">Usage</h2>
+<div class="highlight highlight-source-erlang" dir="auto"><pre class="notranslate">[<span class="pl-en">io</span>:<span class="pl-en">format</span>(<span class="pl-s"><span class="pl-pds">"</span><span class="pl-c1">~ts</span> <span class="pl-c1">~ts~n</span><span class="pl-pds">"</span></span>, [<span class="pl-smi">N</span>, <span class="pl-smi">U</span>]) || #{<span class="pl-c1">name</span> :<span class="pl-k">=</span> <span class="pl-smi">N</span>, <span class="pl-c1">url</span> :<span class="pl-k">=</span> <span class="pl-smi">U</span>} <span class="pl-k">&lt;-</span> <span class="pl-en">gtm_tool_finder_erl</span>:<span class="pl-en">search</span>(<span class="pl-s"><span class="pl-pds">"</span>enrichment<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>Tool<span class="pl-pds">"</span></span>, <span class="pl-c1">10</span>)].</pre></div>
+<p dir="auto">Command line: <code class="notranslate">rebar3 escriptize &amp;&amp; _build/default/bin/gtm_tool_finder --kind comparison clay</code>.</p>
+<p dir="auto">Every result links to the full page on <a href="https://www.onegtmlab.dev/tool-directory">onegtmlab.dev/tool-directory</a>. The list ships inside the package, so it works offline and sends no data anywhere.</p>
+<p dir="auto">Also available as a <a href="https://pypi.org/project/gtm-tool-finder/">Python package</a>, a <a href="https://rubygems.org/gems/gtm-tool-finder">Ruby gem</a>, an <a href="https://hex.pm/packages/gtm_tool_finder">Elixir package</a> and a <a href="https://hex.pm/packages/gtm_tool_directory">Gleam package</a>. Built by <a href="https://www.onegtmlab.dev">OneGTMLab</a>, a GTM engineering agency. MIT licensed.</p>
+</main>
+<footer><p>Source: <a href="https://github.com/jaizendra-netizen/gtm-tool-finder-erlang">github.com/jaizendra-netizen/gtm-tool-finder-erlang</a>. Maintained by <a href="https://www.onegtmlab.dev">OneGTMLab</a>.</p></footer>
+</body></html>

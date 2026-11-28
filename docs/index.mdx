@@ -1,0 +1,28 @@
+---
+title: "gtmtoolfindererl"
+description: "Erlang library and escript to search the OneGTMLab GTM tool directory offline"
+---
+
+Search the [OneGTMLab](https://www.onegtmlab.dev) GTM tool directory from Erlang or your terminal:
+
+- API reviews for 66 sales and marketing tools: pricing, rate limits, keys and MCP support
+- 99 head-to-head tool comparisons, such as Apollo vs Clay
+- 110 plain-English definitions of GTM terms
+
+## Installation
+
+```erlang
+{deps, [gtm_tool_finder_erl]}.
+```
+
+## Usage
+
+```erlang
+[io:format("~ts ~ts~n", [N, U]) || #{name := N, url := U} <- gtm_tool_finder_erl:search("enrichment", "Tool", 10)].
+```
+
+Command line: `rebar3 escriptize && _build/default/bin/gtm_tool_finder --kind comparison clay`.
+
+Every result links to the full page on [onegtmlab.dev/tool-directory](https://www.onegtmlab.dev/tool-directory). The list ships inside the package, so it works offline and sends no data anywhere.
+
+Also available as a [Python package](https://pypi.org/project/gtm-tool-finder/), a [Ruby gem](https://rubygems.org/gems/gtm-tool-finder), an [Elixir package](https://hex.pm/packages/gtm_tool_finder) and a [Gleam package](https://hex.pm/packages/gtm_tool_directory). Built by [OneGTMLab](https://www.onegtmlab.dev), a GTM engineering agency. MIT licensed.
